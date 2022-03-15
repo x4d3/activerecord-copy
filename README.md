@@ -39,9 +39,19 @@ MyModel.find_by(field_1: 'abc')
 ## Authors
 
 * [Lukas Fittl](https://github.com/lfittl)
+* [Xavier Delamotte](https://github.com/x4d3)
 
 Credits to [Pete Brumm](https://github.com/pbrumm) who wrote pg_data_encoder and
 which this library repurposes.
+
+## Developing
+
+```
+./start-local-db.sh
+cd spec/dummy
+bundle install
+DATABASE_URL='postgis://postgres:postgres@localhost:5577' rake db:create db:migrate db:test:prepare
+```
 
 ## LICENSE
 
